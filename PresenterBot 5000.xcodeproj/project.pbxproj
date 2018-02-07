@@ -10,6 +10,8 @@
 		9E2D9216202959F500291B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D9215202959F500291B15 /* AppDelegate.swift */; };
 		9E2D921D202959F500291B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D921C202959F500291B15 /* Assets.xcassets */; };
 		9E2D9220202959F500291B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D921E202959F500291B15 /* LaunchScreen.storyboard */; };
+		9E2D922920295AF900291B15 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D922820295AF900291B15 /* SlideViewController.swift */; };
+		9E2D922B20295D9400291B15 /* SlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D922A20295D9400291B15 /* SlideViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		9E2D921C202959F500291B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E2D921F202959F500291B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E2D9221202959F500291B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E2D922820295AF900291B15 /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		9E2D922A20295D9400291B15 /* SlideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +54,22 @@
 		9E2D9214202959F500291B15 /* PresenterBot 5000 */ = {
 			isa = PBXGroup;
 			children = (
+				9E2D922720295AEA00291B15 /* ViewControllers */,
 				9E2D9215202959F500291B15 /* AppDelegate.swift */,
 				9E2D921C202959F500291B15 /* Assets.xcassets */,
 				9E2D921E202959F500291B15 /* LaunchScreen.storyboard */,
 				9E2D9221202959F500291B15 /* Info.plist */,
 			);
 			path = "PresenterBot 5000";
+			sourceTree = "<group>";
+		};
+		9E2D922720295AEA00291B15 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E2D922820295AF900291B15 /* SlideViewController.swift */,
+				9E2D922A20295D9400291B15 /* SlideViewController.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +133,7 @@
 			files = (
 				9E2D9220202959F500291B15 /* LaunchScreen.storyboard in Resources */,
 				9E2D921D202959F500291B15 /* Assets.xcassets in Resources */,
+				9E2D922B20295D9400291B15 /* SlideViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E2D922920295AF900291B15 /* SlideViewController.swift in Sources */,
 				9E2D9216202959F500291B15 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

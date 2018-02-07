@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
 
-    window?.rootViewController = UIViewController()
+    let navigationController = UINavigationController(rootViewController: SlideViewController(slides: [
+    ]))
+    navigationController.isNavigationBarHidden = true
+
+    window?.rootViewController = navigationController
 
     return true
   }

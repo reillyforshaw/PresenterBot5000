@@ -80,21 +80,9 @@ class SlideViewController : UIViewController {
   }
 
   override func viewDidLayoutSubviews() {
-    guard let slideText = slideTextLabel.text.map({ $0 as NSString }) else { return }
+    guard let slideText = slideTextLabel.text else { return }
 
-    var fontSize = 100 as CGFloat
-
-    let containerSize = CGSize(width: slideTextLabelContainer.frame.width, height: CGFloat.infinity)
-
-    func height(forFontSize fontSize: CGFloat) -> CGFloat {
-      return slideText.boundingRect(with: containerSize, options: [.usesLineFragmentOrigin], attributes: [.font : UIFont.systemFont(ofSize: fontSize)], context: nil).height
-    }
-
-    while height(forFontSize: fontSize) > slideTextLabelContainer.frame.height {
-      fontSize -= 1
-    }
-
-    slideTextLabel.font = .systemFont(ofSize: fontSize)
+    slideTextLabel.font = UIFont.systemFontOfMaxSize(forString: slideText as NSString, boundedBy: slideTextLabelContainer.frame.size, mode: .fixedWidth, maxFontSize: 100)
   }
 
   private func addStyleToSlideText() {
@@ -107,7 +95,7 @@ class SlideViewController : UIViewController {
 
   private func addStyleToProgressLabel() {
     progressLabel.textColor = UIColor(white: 0.75, alpha: 1)
-    progressLabel.font = UIFont.preferredFont(forTextStyle: .footnote)
+    progressLabel.font = .preferredFont(forTextStyle: .footnote)
   }
 
   @IBAction private func back() {
